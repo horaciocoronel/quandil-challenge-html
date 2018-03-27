@@ -1,2 +1,10 @@
 // Style files in the pods folder are automatically loaded in.
 @import 'pod-styles';
+
+// Import font-families
+@import url('https://fonts.googleapis.com/css?family=Quantico:400,700|Source+Sans+Pro:300,400,600');
+
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
