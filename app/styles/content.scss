@@ -1,0 +1,15 @@
+@import 'colors';
+
+.content {
+	background: $blue-gray;
+	display: flex;
+	flex-basis: auto;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 1;
+	line-height: 16px;
+	margin: 0px;
+	max-width: 100%;
+	padding: 0px;
+	-webkit-font-smoothing: antialiased;
+}
