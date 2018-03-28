@@ -36,7 +36,7 @@ nav {
 		font-weight: 600;
 		line-height: 15px;
 		padding: 20px;
-		text-decoration-line: none;
+		text-decoration: none;
 		text-transform: uppercase;
 	}
 	& .left-nav {
@@ -68,6 +68,28 @@ nav {
 		margin: 0px;
 		padding: 0px;
 		width: 420.797px;
+	}
+}
+
+.title-header {
+	background-color: $light-blue;
+	color: $white;
+	display: flex;
+	align-items: flex-start;
+	padding: 1.5px 0;
+	& .avatar {
+		width: 56px;
+		padding: 15px 0;
+		justify-content: center;
+		margin: 0 10px 0 20px;
+	}
+	& span {
+		font-family: 'Quantico';
+		font-size: 30px;
+		font-weight: 700;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		justify-content: center;
 	}
 }
 
