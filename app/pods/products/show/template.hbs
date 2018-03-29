@@ -3,26 +3,31 @@
 	<img src="../assets/avatar.png" class="avatar" />
 	<span class="title">Data Publisher</span>
 </div>
-
-<h3>Sub-Product Page</h3>
-
-
-
-<h4>{{product.name}}</h4>
-
+<div class="dataset-name"><h4>{{product.name}}</h4>
+	<div class="primary-buttons">
+		<button class="silhouete">Coverage</button>
+		<button class="full">Download <span class="down-arrow">&#9660;</span></button>
+	</div>
+</div>
+<div class="data-sample">
+	<div class="tab-buttons">
+		<a class="active" href="#">Data Sample</a>
+		<a href="#">Coverage</a>
+	</div>
+</div>
 <table>
 	<tr>
 		{{#each-in productData.[1] as |key|}}
 			<th>{{key}}</th>
 		{{/each-in}}
 	</tr>
-	  {{#each productData as |data|}}
-	    <tr>
+		{{#each productData as |data|}}
+			<tr>
 				{{#each-in data as |key value|}}
 					<td>{{value}}</td>
 				{{/each-in}}
-	    </tr>
-	  {{/each}}
+			</tr>
+		{{/each}}
 </table>
 
 {{outlet}}
