@@ -1,3 +1,46 @@
+.full-table{
+	height: 100vh;
+	table{
+    display: block;
+    overflow: scroll;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-collapse: collapse;
+    font-size: 12px;
+		margin:0;
+    height: calc(100% - 220px);;
+    th, td{
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 130px;
+    }
+    & .count-column{
+      padding: 0;
+      padding-left: 5px;
+      background: $table-footer;
+    }
+    th{
+      padding: 10px 23px 10px 10px;
+      background: $table-footer;
+      font-weight: 700;
+      border-top: solid 1px $grey-border;
+    }
+    td{
+      padding: 5px 5px 0px 10px;
+      font-weight: lighter;
+      border: dotted 1px $grey-border;
+    }
+  }
+  & .table-footer{
+    width: 100%;
+    font-size: 12px;
+    color: $dark-blue;
+    height: 30px;
+    padding: 8px;
+    text-transform: uppercase;
+    background: $table-footer;
+  }
+}
 .title-header {
 	&.show {
 		font-family: 'Quantico';
@@ -88,5 +131,4 @@
 			-webkit-font-smoothing: antialiased;
 		}
 	}
-
 }

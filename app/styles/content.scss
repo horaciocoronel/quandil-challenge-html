@@ -55,12 +55,13 @@
 }
 
 table {
+	height: 100%;
 	background-color: $white;
-	border: solid 1px $grey-border;
-	margin: 0 20px;
+	margin: 0;
 	border-spacing: 0;
 	display: block;
 	overflow-x: auto;
+	overflow-y: scroll;
 	white-space: nowrap;
 	tr:first-child {
 		font-size: 13px;
@@ -68,6 +69,9 @@ table {
 		background-color: $blue-gray;
 		th {
 			padding: 10px;
+			border-top: solid 1px $grey-border;
+			border-bottom: solid 1px $grey-border;
+
 		}
 	}
 	td {
