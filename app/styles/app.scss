@@ -1,17 +1,26 @@
 // Style files in the pods folder are automatically loaded in.
+@import 'colors';
 @import 'pod-styles';
 @import 'content';
 @import 'sidebar';
-@import 'colors';
 
 // Import font-families
-@import url('https://fonts.googleapis.com/css?family=Quantico:400,700|Source+Sans+Pro:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Quantico:400,700|Source+Sans+Pro:300,400,700');
 
 *, ::after, ::before {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-size: 100%;
+}
+
+html, body, main, content {
+	height: 100% !important;
+	min-height: 100%;
+}
+
+body > .ember-view {
+    height: 100%;
 }
 
 body {
@@ -31,7 +40,7 @@ nav {
 		display: flex;
 		font-size: 15px;
 		font-style: normal;
-		font-weight: 600;
+		font-weight: 400;
 		line-height: 15px;
 		padding: 20px;
 		text-decoration: none;
@@ -77,7 +86,7 @@ nav {
 	color: $white;
 	display: flex;
 	align-items: flex-start;
-	padding: 1.5px 0;
+	padding: 0;
 	& .avatar {
 		width: 56px;
 		padding: 15px 0;
@@ -125,6 +134,8 @@ nav {
 
 
 main {
+	height: 100% !important;
+	min-height: 100%;
 	box-sizing: border-box;
 	display: flex;
 	margin: 0px;
