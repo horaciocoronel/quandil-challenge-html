@@ -1,33 +1,35 @@
-<div class="title-header show">
-	<span class="left-arrow">{{link-to '‹' 'products'}}</span>
-	<img src="../assets/avatar.png" class="avatar" />
-	<span class="title">Data Publisher</span>
-</div>
-<div class="dataset-name"><h4>{{product.name}}</h4>
-	<div class="primary-buttons">
-		<button class="silhouete">Coverage</button>
-		<button class="full">Download <span class="down-arrow">&#9660;</span></button>
+<div class="full-table">
+	<div class="title-header show">
+		<span class="left-arrow">{{link-to '‹' 'products'}}</span>
+		<img src="../assets/avatar.png" class="avatar" />
+		<span class="title">Data Publisher</span>
 	</div>
-</div>
-<div class="data-sample">
-	<div class="tab-buttons">
-		<a class="active" href="#">Data Sample</a>
-		<a href="#">Coverage</a>
+	<div class="dataset-name"><h4>{{product.name}}</h4>
+		<div class="primary-buttons">
+			<button {{action "click"}} class="silhouete">Coverage</button>
+			<button {{action "click"}} class="full">Download <span class="down-arrow">&#9660;</span></button>
+		</div>
 	</div>
+	<div class="data-sample">
+		<div class="tab-buttons">
+			<a {{action "click"}} class="active" href="#">Data Sample</a>
+			<a {{action "click"}} href="#">Coverage</a>
+		</div>
+	</div>
+	<table>
+		<tr>
+			{{#each-in productData.[1] as |key|}}
+				<th>{{key}}</th>
+			{{/each-in}}
+		</tr>
+			{{#each productData as |data|}}
+				<tr>
+					{{#each-in data as |key value|}}
+						<td>{{value}}</td>
+					{{/each-in}}
+				</tr>
+			{{/each}}
+	</table>
+	<div class="table-footer">sample rows</div>
 </div>
-<table>
-	<tr>
-		{{#each-in productData.[1] as |key|}}
-			<th>{{key}}</th>
-		{{/each-in}}
-	</tr>
-		{{#each productData as |data|}}
-			<tr>
-				{{#each-in data as |key value|}}
-					<td>{{value}}</td>
-				{{/each-in}}
-			</tr>
-		{{/each}}
-</table>
-
 {{outlet}}

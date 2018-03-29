@@ -1,15 +1,15 @@
 {{#unless isOnHideNavRoutes}}
 <nav>
 	<div class="left-nav">
-		<a href="#"><span class="glyphicon glyphicon-nav" aria-hidden="true"></span></a>
-		<a href="#">Alternative Data</a>
-		<a href="#" class="active">Core Financial Data</a>
+		<a {{action "click"}} href="#"><span class="glyphicon glyphicon-nav" aria-hidden="true"></span></a>
+		<a {{action "click"}} href="#">Alternative Data</a>
+		<a {{action "click"}} href="#" class="active">Core Financial Data</a>
 	</div>
-	<div class="center-nav"><a href="#"><img src='../assets/quandl-logo.svg' class="logo"></a></div>
+	<div class="center-nav"><a {{action "click"}} href="#"><img src='../assets/quandl-logo.svg' class="logo"></a></div>
 	<div class="right-nav">
-		<a href="#">Docs & Help</a>
-		<a href="#">Blog</a>
-		<a href="#">Sign In</a>
+		<a {{action "click"}} href="#">Docs & Help</a>
+		<a {{action "click"}} href="#">Blog</a>
+		<a {{action "click"}} href="#">Sign In</a>
 	</div>
 </nav>
 <div class="title-header">
