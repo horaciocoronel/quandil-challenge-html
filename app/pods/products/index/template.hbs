@@ -1,3 +1,6 @@
+<main>
+	<div class="content">
+<h2>Product Page - Layout</h2>
 <h3>Dataset Name</h3>
 
 {{#each products as |product|}}
@@ -18,4 +21,10 @@
     {{/each}}
   </table>
 {{/each}}
+</div>
+<aside>
+{{side-bar publisher=model.publisher}}
+</aside>
+</main>
+
 {{outlet}}
