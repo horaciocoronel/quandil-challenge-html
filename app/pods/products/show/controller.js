@@ -8,5 +8,6 @@ export default Ember.Controller.extend({
     click(title) {
       console.log('I was clicked');
     }
-  }
+  },
+
 });
